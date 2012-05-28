@@ -10,6 +10,7 @@ Simply add `gem 'railsyard-analytics'` to your `Gemfile` and run `bundle install
 Railsyard::Backend.define_dashboard do
 
   column do
+
     widget :analytics_line_chart, :last_week_visits do
       username "your@credentials.com"
       password "password"
@@ -18,9 +19,7 @@ Railsyard::Backend.define_dashboard do
       end_date -> { Date.today }
       metrics [ :visits, :visitors, :pageviews ]
     end
-  end
 
-  column do
     widget :analytics_pie_chart, :returning_visitors do
       username "your@credentials.com"
       password "password"
@@ -31,9 +30,11 @@ Railsyard::Backend.define_dashboard do
       metric :pageviews
       sort :pageviews.desc
     end
+
   end
 
 end
+```
 
 ### Testing
 
