@@ -1,0 +1,7 @@
+en:
+  railsyard:
+    analytics:
+      metrics:
+        visits: "Visits"
+        visitors: "Visitators"
+        pageviews: "Page views"
