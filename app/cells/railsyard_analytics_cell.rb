@@ -1,5 +1,8 @@
 class RailsyardAnalyticsCell < Cell::Rails
 
+  cache :line_chart, :expires_in => 10.minutes
+  cache :pie_chart, :expires_in => 10.minutes
+
   def line_chart(settings)
     settings = settings.to_hash.reverse_merge(
       start_date: Proc.new { 30.days.ago },
