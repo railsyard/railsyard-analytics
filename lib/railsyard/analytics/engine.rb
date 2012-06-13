@@ -2,7 +2,7 @@ module Railsyard
   module Analytics
     class Engine < ::Rails::Engine
 
-      initializer "Railsyard precompile hook", :group => :assets do |app|
+      initializer "Railsyard precompile hook" do |app|
         app.config.assets.precompile += [
           "railsyard/analytics.js"
         ]
