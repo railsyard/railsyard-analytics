@@ -14,7 +14,7 @@ class RailsyardAnalyticsCell < Cell::Rails
     metrics = settings[:metrics].is_a?(Array) ? settings[:metrics] : [ settings[:metrics] ]
 
     Garb::Session.login(settings[:username], settings[:password])
-    profile = Garb::Management::Profile.all.find { |p| p.title = settings[:profile] }
+    profile = Garb::Management::Profile.all.find { |p| p.title == settings[:profile] }
 
     report_class = Class.new
     report_class.extend Garb::Model
